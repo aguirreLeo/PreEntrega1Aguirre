@@ -1,23 +1,27 @@
-function Producto(tipo, marca, precio) {
-    this.tipo = tipo;
-    this.marca = marca;
-    this.precio = precio;
-    this.precioFinal = function() {
-        let pFinal = this.precio + (this.precio * 0.21) + 10;
+class Producto {
+    constructor(tipo, marca, precio) {
+        this.tipo = tipo;
+        this.marca = marca;
+        this.precio = precio;
+    }
+    precioFinal() {
+        let pFinal = this.precio + (this.precio * 0.21) + 2500;
         return pFinal;
     }
 }
 
-const compu = new Producto("Laptop", "Macbook", 1500);
-const celu = new Producto("Celular", "Iphone", 950);
-const tablet = new Producto("Tablet", "Samsung", 800);
+const compu = new Producto("Laptop", "Macbook", 1500000);
+const celu = new Producto("Celular", "Iphone", 950000);
+const tablet = new Producto("Tablet", "Samsung", 800000);
+const auri = new Producto("Auricular", "Apple", 350400);
+const cargador = new Producto("Cargador", "Samsung", 65000);
 
-alert("Rep Cel te da la bienvenida a nuestro sitio Web");
+let carrito = [];
 
 function mostrarDetallesProducto(producto) {
     console.table(producto);
     console.log("IVA: %21");
-    console.log("Envío: $10 usd.");
+    console.log("Envío: $2500.");
     console.log("El precio final es: $" + producto.precioFinal().toFixed(2));
     alert("Puede realizar el pago en 1, 3 y 6 pagos sin interés. En 12 pagos queda con un recargo de 20%");
 }
@@ -46,9 +50,21 @@ function calcularCuotas(producto, cuotas) {
     console.log(`Te queda en ${cuotas} pagos de $${montoCuota.toFixed(2)}`);
 }
 
-let seleccion = parseInt(prompt("Elija su producto a comprar: 1: Computadora | 2: Celular | 3: Tablet"));
+function agregarAlCarrito(producto) {
+    carrito.push(producto);
+    console.log(`${producto.tipo} ha sido agregado al carrito.`);
+}
 
-if (seleccion > 0 && seleccion < 4) {
+function mostrarCarrito() {
+    console.log("Productos en el carrito:");
+        carrito.forEach((producto, recorrido) => {
+            console.log(`${recorrido + 1}: ${producto.tipo} - ${producto.marca} - $${producto.precioFinal().toFixed(2)}`);
+        });
+    }
+
+let seleccion = parseInt(prompt("Elija su producto a comprar: 1: Computadora | 2: Celular | 3: Tablet | 4: Auricular | 5: Cargador"));
+
+while ((seleccion > 0 && seleccion < 6) || seleccion != "0") {
     let productoSeleccionado;
 
     switch (seleccion) {
@@ -60,6 +76,12 @@ if (seleccion > 0 && seleccion < 4) {
             break;
         case 3:
             productoSeleccionado = tablet;
+            break;
+        case 4:
+            productoSeleccionado = auri;
+            break;
+        case 5:
+            productoSeleccionado = cargador;
             break;
         default:
             console.log("Selección no válida");
@@ -74,6 +96,10 @@ if (seleccion > 0 && seleccion < 4) {
     } else {
         console.log("Valor no válido");
     }
-} else {
-    console.log("Selección no válida");
-}
+
+    agregarAlCarrito(productoSeleccionado);
+
+    mostrarCarrito();
+
+    seleccion = parseInt(prompt("Elija otro producto a comprar: 1: Computadora | 2: Celular | 3: Tablet | 4: Auricular | 5: Cargador | -- Presione 0 para salir"))
+} 
