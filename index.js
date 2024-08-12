@@ -19,7 +19,6 @@ const cargador = new Producto("Cargador", "Samsung", 65000);
 let carrito = [];
 
 function mostrarDetallesProducto(producto) {
-    console.table(producto);
     console.log("IVA: %21");
     console.log("Envío: $2500.");
     console.log("El precio final es: $" + producto.precioFinal().toFixed(2));
