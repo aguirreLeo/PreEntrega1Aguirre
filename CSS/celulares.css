@@ -1,0 +1,71 @@
+/* Estilos generales celulares */
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    aspect-ratio: 1.2;
+}
+
+.card--titulo {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.descr-producto {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card--btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3453db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card--btn:hover {
+    background-color: #2980b9;
+}

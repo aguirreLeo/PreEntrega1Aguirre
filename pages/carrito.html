@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./../style.css">
+    <link rel="stylesheet" href="./../CSS/carrito.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header">
-        <a href="./index.html"><img src="./Apple_Inc.-Logo.wine.svg" alt="-Logo"></a>
+        <a href="./../index.html"><img src="./../Apple_Inc.-Logo.wine.svg" alt="-Logo"></a>
         <div class="search-container">
             <input type="text" placeholder="¿Qué quieres buscar?" class="search-input">
             <button class="search-button">
@@ -20,7 +21,7 @@
             <a href="#" target="_blank">
                 <i class="fa-regular fa-user"></i>
             </a>
-            <a href="./pages/carrito.html">
+            <a href="./carrito.html">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="sumatoria">0</span>
             </a>
@@ -28,31 +29,21 @@
     </header>
     <div class="navegacion">
         <button class="btn-nav">
-            <a href="./pages/celulares.html">Celulares</a>
+            <a href="./celulares.html">Celulares</a>
         </button>
         <button class="btn-nav">
             <a href="#">Accesorios</a>
         </button>
     </div>
     
-    <div class="container-carousel">
-        <div class="carruseles" id="slider">
-            <section class="slider-section">
-                <img src="./img/Samsung-Galaxy-S21-Ultra-portada.jpg" alt="">
-            </section>
-            <section class="slider-section">
-                <img src="./img/samsung-galaxy-z-flip4-3.jpg" alt="">
-            </section>
-            <section class="slider-section">
-                <img src="./img/iphone-14-pro-2806887.jpg" alt="">
-            </section>
-        </div>
-        <div class="btn-right"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="btn-left"><i class="fa-solid fa-arrow-right"></i></div>
-    </div>
-        
+    <main class="main">
+        <section id="productos">
+            
+        </section>
 
 
-    <script src="index.js"></script>
+
+    <script src="./../JS/celulares.js"></script>
+    <script src="./../JS/carrito.js"></script>
 </body>
 </html>
