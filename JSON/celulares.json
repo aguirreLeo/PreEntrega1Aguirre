@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "imagen": "./../img/celulares/S24.jpg",
+        "titulo": "Samsung S24 Ultra",
+        "descrip": "512gb/12ram",
+        "precio": 2499000
+    },
+    {
+        "id": 2,
+        "imagen": "./../img/celulares/A54.jpg",
+        "titulo": "Samsung Galaxy A54 5G 256 GB",
+        "descrip": "Awesome graphite 8 GB RAM",
+        "precio": 892.999
+    },
+    {
+        "id": 3,
+        "imagen": "./../img/celulares/ZFlip.jpg",
+        "titulo": "Samsung Galaxy Z Flip3",
+        "descrip": "Lavender 128gb 8gb Ram 5g",
+        "precio": 2799998
+    },
+    {
+        "id": 4,
+        "imagen": "./../img/celulares/iphone-14.jpg",
+        "titulo": "Apple iPhone 14",
+        "descrip": "(128 GB) - Azul",
+        "precio": 1675680
+    },
+    {
+        "id": 5,
+        "imagen": "./../img/celulares/iphone-14-pro-max.jpg",
+        "titulo": "Apple iPhone 14 Pro Max",
+        "descrip": "(128 GB) - Negro espacial",
+        "precio": 2999990
+    },
+    {
+        "id": 6,
+        "imagen": "./../img/celulares/iphone-15-pro-max.jpg",
+        "titulo": "Apple iPhone 15 Pro Max (256 GB)",
+        "descrip": "Titanio Negro - Distribuidor Autorizado",
+        "precio": 4699900
+    },
+    {
+        "id": 7,
+        "imagen": "./../img/celulares/Razr40.jpg",
+        "titulo": "Motorola RAZR 40 256 GB",
+        "descrip": "Gris mate 8 GB RAM",
+        "precio": 1299999
+    },
+    {
+        "id": 8,
+        "imagen": "./../img/celulares/Edge50.jpg",
+        "titulo": "Moto Edge 30 Ultra 256gb",
+        "descrip": "Blanco Smartphone Motorola",
+        "precio": 1539999
+    },
+    {
+        "id": 9,
+        "imagen": "./../img/celulares/G84.jpg",
+        "titulo": "Moto G84 5g",
+        "descrip": "Color Viva magenta",
+        "precio": 599.999
+    }
+]
