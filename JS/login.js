@@ -22,7 +22,7 @@ const loginIcon = document.getElementById("login");
 
 if (localStorage.getItem("sesionActiva")) {
     const sesionActiva = JSON.parse(localStorage.getItem("sesionActiva"));
-    loginIcon.innerHTML = `<img src="${sesionActiva.avatar}" alt="Avatar">`;
+    loginIcon.innerHTML = `<img src="${sesionActiva.avatar}" alt="Avatar" style="">`;
 }
 
 loginIcon.addEventListener("click", (e) => {

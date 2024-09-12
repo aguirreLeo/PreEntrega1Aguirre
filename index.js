@@ -38,3 +38,10 @@ function moveToLeft () {
     }
 
 }
+function carritoSuma() {
+    const almacenamiento = JSON.parse(localStorage.getItem("Cart")) || [];
+    const cuenta = almacenamiento.reduce((acum, el) => acum + el.cantidad, 0);
+    const addElement = document.querySelector("#sumatoria");
+    addElement.innerText = cuenta;
+}
+carritoSuma();
