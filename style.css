@@ -54,6 +54,7 @@ body{
 .nav-principal {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-principal a {
@@ -97,9 +98,7 @@ body{
     transform: scale(1.1);
 }
 
-#iconCarrito {
-    margin-top: 5px;
-}
+
 
 
 .navegacion {
@@ -251,7 +250,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 150px; /* Añade espacio entre los contenedores */
+    gap: 150px; 
 }
 
 .enlaceCelu, .enlaceAcce {
@@ -268,11 +267,11 @@ body{
 }
 
 .enlaceCelu {
-    background-image: url('./img/Celulares.jpg');
+    background-image: url('./img/enlaces/Celulares.jpg');
 }
 
 .enlaceAcce {
-    background-image: url('./img/Accesorios.jpg');
+    background-image: url('./img/enlaces/Accesorios.jpg');
 }
 
 .enlaceCelu a, .enlaceAcce a {

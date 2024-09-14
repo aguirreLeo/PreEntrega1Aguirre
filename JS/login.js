@@ -22,7 +22,7 @@ const loginIcon = document.getElementById("login");
 
 if (localStorage.getItem("sesionActiva")) {
     const sesionActiva = JSON.parse(localStorage.getItem("sesionActiva"));
-    loginIcon.innerHTML = `<img src="${sesionActiva.avatar}" alt="Avatar" style="">`;
+    loginIcon.innerHTML = `<img src="${sesionActiva.avatar}" alt="Avatar" >`;
 }
 
 loginIcon.addEventListener("click", (e) => {
@@ -43,7 +43,6 @@ loginIcon.addEventListener("click", (e) => {
             }
         });
     } else {
-        // Login
         Swal.fire({
             title: "Iniciar Sesión",
             html: `<input type="text" id="username" class="swal2-input" placeholder="Usuario">
@@ -79,6 +78,44 @@ loginIcon.addEventListener("click", (e) => {
         });
     }
 });
+
+const btnComprar = document.querySelector("#totales button");
+
+btnComprar.addEventListener("click", () => {
+    Swal.fire({
+        title: '¿Quieres confirmar la compra?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, comprar',
+        cancelButtonText: 'No, cancelar',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: '¡Compra confirmada!',
+                text: 'Gracias por tu compra.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+
+            localStorage.removeItem("Cart");
+
+            renderizarProductos(); 
+            carritoSuma(); 
+            actualizarTotales(); 
+            revisarMensajeVacio(); 
+
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire({
+                title: 'Compra cancelada',
+                text: 'Tu compra no ha sido procesada.',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+    });
+});
+
 
 
 
